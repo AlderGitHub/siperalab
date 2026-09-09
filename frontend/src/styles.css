@@ -1,0 +1,29 @@
+:root {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
