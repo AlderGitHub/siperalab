@@ -13,18 +13,59 @@
       <nav aria-label="Navigasi utama">
         <a href="/">Beranda</a>
         <a href="/peralatan.html">Peralatan</a>
+        <a href="/peminjaman.html">Ajukan Peminjaman</a>
       </nav>
     </header>
     <main>
-      <h1>Daftar Peralatan</h1>
-      <ul>
-        <li>Laptop - tersedia 8 unit</li>
-        <li>Router - tersedia 12 unit</li>
-        <li>Kamera - tersedia 5 unit</li>
-      </ul>
+      <h1>Katalog Peralatan</h1>
+      <section aria-labelledby="judul-katalog">
+        <h2 id="judul-katalog">Peralatan yang dapat dipinjam</h2>
+
+        <article>
+          <h3>Multimeter Digital</h3>
+          <figure>
+            <img
+              src="/images/multimeter.svg"
+              alt="Multimeter digital untuk pengukuran listrik"
+              width="320"
+            >
+            <figcaption>Alat ukur tegangan, arus, dan resistansi.</figcaption>
+          </figure>
+          <p><strong>Stok:</strong> 6 unit</p>
+          <p><strong>Kondisi:</strong> Baik</p>
+        </article>
+
+        <article>
+          <h3>Router</h3>
+          <figure>
+            <img
+              src="/images/router.svg"
+              alt="Router jaringan untuk praktikum konfigurasi jaringan"
+              width="320"
+            >
+            <figcaption>Perangkat jaringan untuk latihan routing dan konektivitas.</figcaption>
+          </figure>
+          <p><strong>Stok:</strong> 12 unit</p>
+          <p><strong>Kondisi:</strong> Baik</p>
+        </article>
+
+        <article>
+          <h3>Kamera</h3>
+          <figure>
+            <img
+              src="/images/kamera.svg"
+              alt="Kamera digital untuk dokumentasi kegiatan laboratorium"
+              width="320"
+            >
+            <figcaption>Kamera digital untuk dokumentasi dan kebutuhan praktikum.</figcaption>
+          </figure>
+          <p><strong>Stok:</strong> 5 unit</p>
+          <p><strong>Kondisi:</strong> Baik</p>
+        </article>
+      </section>
     </main>
     <footer>
-      <p><a href="/">Kembali ke beranda</a></p>
+      <p><a href="/peminjaman.html">Lanjut ke formulir peminjaman</a></p>
     </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
