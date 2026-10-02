@@ -1,46 +1,166 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
+  --color-primary: #1d4ed8;
+  --color-primary-dark: #1e3a8a;
+  --color-surface: #ffffff;
+  --color-background: #f5f7fb;
+  --color-border: #cbd5e1;
+  --color-text: #1f2937;
+  --radius: 0.75rem;
+  --space: 1rem;
+
   font-family: system-ui, sans-serif;
   line-height: 1.5;
 }
 
+
+
+
 body {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
 }
+
+main,
+.site-header,
+.site-footer {
+  width: min(1100px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+
+
 
 .site-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
-  padding-bottom: 0.75rem;
+  flex-wrap: wrap;
+
+  padding-block: 1rem;
   border-bottom: 1px solid var(--color-border);
 }
 
+.brand {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+
+
 nav {
   display: flex;
+  gap: 0.75rem;
   flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--color-primary);
+  margin-right: 1rem;
+}
+
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero__content {
+  flex: 1 1 28rem;
+  min-width: 0;
+}
+
+.hero__media {
+  flex: 1 1 20rem;
+}
+
+
+
+
+@media (min-width: 48rem) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+
+
+
+.equipment-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-block: 1rem;
+
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+
+
+
+.equipment-list {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 16rem), 1fr)
+  );
+
   gap: 1rem;
 }
 
-img {
+
+
+
+img,
+svg,
+video {
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
-article,
-fieldset {
-  margin: 1rem 0;
-  padding: 1rem;
-  border: 1px solid #cbd5e1;
+.equipment-card img {
+  max-width: 100%;
+  height: auto;
 }
+
+
+
+
+fieldset {
+  margin-block: 1rem;
+  padding: 1rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+
+
 
 label {
   display: block;
   margin-top: 0.75rem;
   font-weight: 600;
 }
+
+
+
 
 input,
 select,
@@ -50,87 +170,63 @@ button {
   padding: 0.5rem;
 }
 
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+
+
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 18rem), 1fr)
+  );
+
+  gap: 1rem;
+}
+
+
+
+
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+
+
+
 textarea {
   width: min(100%, 36rem);
 }
+
+
+
 
 .hint {
   margin-top: 0.25rem;
   color: #475569;
 }
 
-*, *::before, *::after {
- box-sizing: border-box;
-}
 
- :root {
- --color-primary: #1d4ed8;
- --color-primary-dark: #1e3a8a;
- --color-surface: #ffffff;
- --color-background: #f5f7fb;
- --color-border: #cbd5e1;
- --color-text: #1f2937;
- --radius: 0.75rem;
- --space: 1rem;
- font-family: system-ui, sans-serif;
- line-height: 1.5;
-}
 
-body {
- margin: 0;
- background: var(--color-background);
- color: var(--color-text);
-}
-main, .site-header, .site-footer {
- width: min(1100px, calc(100% - 2rem));
- margin-inline: auto;
-}
 
- .site-header {
- padding-block: 1rem;
- border-bottom: 1px solid var(--color-border);
-}
-.brand {
- color: var(--color-primary-dark);
- font-weight: 700;
- text-decoration: none;
-}
-nav a {
- color: var(--color-primary);
- margin-right: 1rem;
-}
-
-.equipment-card {
- background: var(--color-surface);
- border: 1px solid var(--color-border);
- border-radius: var(--radius);
- padding: 1rem;
- margin-block: 1rem;
-}
-.equipment-card img {
- max-width: 100%;
- height: auto;
-}
-
-fieldset {
- margin-block: 1rem;
- padding: 1rem;
- border: 1px solid var(--color-border);
- border-radius: var(--radius);
-}
-label {
- display: block;
- margin-top: .75rem;
-}
-input, select, textarea {
- width: 100%;
- padding: .7rem;
- border: 1px solid var(--color-border);
- border-radius: .5rem;
- font: inherit;
-}
-
-input:focus, select:focus, textarea:focus, button:focus, a:focus {
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+a:focus {
   outline: 3px solid #93c5fd;
- outline-offset: 2px;
+  outline-offset: 2px;
 }

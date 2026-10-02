@@ -18,7 +18,7 @@
 - [x] Field penting memiliki name (nim, nama, alat, tanggal_pinjam, durasi, keperluan, setuju).
 - [x] Submit kosong memunculkan validasi browser (semua field wajib memakai required).
 - [x] Urutan Tab logis: Navigasi -> NIM -> Nama lengkap -> Peralatan -> Tanggal peminjaman -> Durasi -> Keperluan -> Persetujuan -> Kirim pengajuan.
-- [ ] Validator W3C Nu HTML Checker belum dijalankan (dicek manual saat internet tersedia).
+- [x] Nu HTML Checker: `index.html`, `peralatan.html`, dan `peminjaman.html` lolos validasi tanpa error.
 
 
 
